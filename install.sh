@@ -126,15 +126,7 @@ fi
 # Autologin
 # =======================================================
 
-sudo mkdir -p /etc/systemd/system/getty@tty1.service.d
 
-echo "[Service]
-Type=simple
-ExecStart=
-ExecStart=-/sbin/agetty --autologin $USER --noclear %I 38400 linux" | sudo tee /etc/systemd/system/getty@tty1.service.d/override.conf
-
-sudo systemctl daemon-reload
-sudo systemctl enable --now getty@tty1.service
 # =======================================================
 # Install dot files & packages
 # =======================================================
