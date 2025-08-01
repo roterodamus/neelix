@@ -121,7 +121,7 @@ if [ -n "$(lspci | grep -i 'nvidia')" ]; then
   sudo sed -i -E 's/  +/ /g' "$MKINITCPIO_CONF"
 
   sudo mkinitcpio -P
-
+fi
 # =======================================================
 # Autologin
 # =======================================================
