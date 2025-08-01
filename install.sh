@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Check if the script is run as root
-if [ "$EUID" -ne 0 ]; then
-    echo "Please run as root"
-    exit
-fi
+#if [ "$EUID" -ne 0 ]; then
+#    echo "Please run as root"
+#    exit
+#fi
 
 # Only add Chaotic-AUR if the architecture is x86_64 so ARM users can build the packages
 if [[ "$(uname -m)" == "x86_64" ]]; then
