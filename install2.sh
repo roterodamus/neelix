@@ -141,7 +141,7 @@ sudo systemctl enable --now getty@tty1.service
 
 cp -R config ~/.config
 
-yay -S --needed --noconfirm < packages.txt
+yay -S --needed --noconfirm - < packages.txt
 
 # Limit log size to avoid running out of disk
 sudo mkdir -p /etc/docker
