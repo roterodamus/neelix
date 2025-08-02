@@ -184,4 +184,6 @@ sudo systemctl enable ly.service
 sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
 
+dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
+
 reboot
