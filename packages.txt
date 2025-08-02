@@ -2,6 +2,7 @@ alacritty
 base
 base-devel
 blueberry
+brightnessctl
 btop
 chaotic-keyring
 chaotic-mirrorlist
