@@ -1,68 +1,74 @@
+# Terrminal Emulators
 alacritty
+
+# Base System
 base
 base-devel
+linux
+linux-firmware
+
+# Development Tools
 bazaar-git
-blueberry
-brightnessctl
-btop
 docker
 docker-buildx
 docker-compose
-efibootmgr
-fastfetch
-fuzzel
 gdb
 git
-gnome-themes-extra
 helix
-htop
-hunspell
-hunspell-en_us
-hyprlock
-imagemagick
-imv
-intel-media-driver
-intel-ucode
-iwd
-kvantum-qt5
-libva-intel-driver
-linux
-linux-firmware
 lldb
-localsend-bin
-ly
-mako
 marksman
-nano
+rust-analyzer
+rustup
+taplo-cli
+wget
+
+# Networking
+blueberry
+iwd
 network-manager-applet
 networkmanager
-niri
+ufw
+ufw-docker
+wireless_tools
+
+# Themes and Fonts
+gnome-themes-extra
+kvantum-qt5
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 otf-font-awesome
+ttf-cascadia-mono-nerd
+ttf-jetbrains-mono
+
+# Image and Graphics
+imagemagick
+imv
+ueberzugpp
+
+# System Utilities
+brightnessctl
+btop
+efibootmgr
+fastfetch
+hyprlock
 pamixer
 polkit-gnome
 power-profiles-daemon
-rust-analyzer
-rustup
 smartmontools
+wiremix
+zram-generator
+
+# Desktop Environment
+fuzzel
+ly
+mako
+niri
 swaybg
 swayidle
 swayosd
-taplo-cli
-ttf-cascadia-mono-nerd
-ttf-jetbrains-mono
-ueberzugpp
-ufw
-ufw-docker
-vim
-vulkan-intel
 walker-bin
 waybar
-wget
-wireless_tools
-wiremix
 wl-clipboard
 xdg-desktop-portal-gnome
 xdg-utils
@@ -72,5 +78,19 @@ xorg-xwayland
 wayland-pipewire-idle-inhibit
 xwayland-satellite
 yazi
+
+# Text Editors
+nano
+vim
+
+# Miscellaneous
+localsend-bin
 zen-browser-bin
-zram-generator
+hunspell-en_us
+hunspell
+
+# Intel
+vulkan-intel
+intel-media-driver
+intel-ucode
+libva-intel-driver
