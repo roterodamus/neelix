@@ -124,7 +124,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"Alacritty$"#
+    match app-id=r#"foot$"#
     opacity 0.99
 }
 
@@ -309,7 +309,7 @@ binds {
     Mod+Shift+P { power-off-monitors; }
     Super+Alt+L hotkey-overlay-title="Lock Device" { spawn "hyprlock"; }
     Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Return hotkey-overlay-title="Terminal" { spawn "alacritty"; }
+    Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+Space hotkey-overlay-title="Launcher" { spawn "walker"; }
     Mod+D hotkey-overlay-title="Alt Launcher" { spawn "fuzzel"; }
     Mod+o { toggle-overview; }
