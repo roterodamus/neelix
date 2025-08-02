@@ -166,6 +166,8 @@ systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
 sudo systemctl enable swayosd-libinput-backend.service
 sudo systemctl enable docker.service
+sudo systemctl enable ly.service
+
 sudo systemctl daemon-reload
 
 sudo usermod -aG video $USER
