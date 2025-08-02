@@ -136,7 +136,7 @@ fi
 # Install content of packages.txt, docker, firewall & services
 # =======================================================
 
-yay -S --needed --noconfirm - < packages.txt
+yay -S --needed --noconfirm - < <(grep -v '^#' test.txt)
 
 # Limit log size to avoid running out of disk
 sudo mkdir -p /etc/docker
