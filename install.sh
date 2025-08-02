@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# =======================================================
+# Copy dot files
+# =======================================================
+
+mkdir -p ~/.config
+cp -R config/* ~/.config/
+
+# =======================================================
+# Install chaotic aur & yay
+# =======================================================
+
 # Only add Chaotic-AUR if the architecture is x86_64 so ARM users can build the packages
 if [[ "$(uname -m)" == "x86_64" ]]; then
   # Try installing Chaotic-AUR keyring and mirrorlist
@@ -122,10 +133,11 @@ fi
 
 
 # =======================================================
-# Install dot files & packages
+# Install content of packages.txt, docker, firewall & services
 # =======================================================
 
-cp -R config ~/.config
+mkdir -p ~/.config
+cp -R config/* ~/.config/
 
 yay -S --needed --noconfirm - < packages.txt
 
