@@ -174,4 +174,6 @@ sudo systemctl enable swayosd-libinput-backend.service
 sudo systemctl enable docker.service
 sudo systemctl daemon-reload
 
+sudo usermod -aG video $USER
+sudo usermod -aG uucp $USER
 
