@@ -171,6 +171,9 @@ sudo ufw-docker install
 sudo ufw reload
 
 chmod +x ~/.config/bin/battery-monitor
+
+sudo systemctl daemon-reload
+
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
 systemctl --user enable wayland-pipewire-idle-inhibit.service
@@ -178,8 +181,7 @@ sudo systemctl enable swayosd-libinput-backend.service
 sudo systemctl enable docker.service
 sudo systemctl enable ly.service
 
-sudo systemctl daemon-reload
-
 sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
 
+reboot
