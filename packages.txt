@@ -1,5 +1,5 @@
 # Terrminal Emulators
-alacritty
+foot
 
 # Base System
 base
@@ -43,7 +43,6 @@ ttf-jetbrains-mono
 # Image and Graphics
 imagemagick
 imv
-ueberzugpp
 
 # System Utilities
 brightnessctl
