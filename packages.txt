@@ -51,6 +51,7 @@ brightnessctl
 btop
 efibootmgr
 fastfetch
+flatpak
 hyprlock
 pamixer
 polkit-gnome
