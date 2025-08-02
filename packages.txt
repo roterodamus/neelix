@@ -1,6 +1,7 @@
 alacritty
 base
 base-devel
+bazaar-git
 blueberry
 brightnessctl
 btop
@@ -19,7 +20,6 @@ hunspell
 hunspell-en_us
 hyprlock
 imagemagick
-impala
 imv
 intel-media-driver
 intel-ucode
@@ -53,6 +53,7 @@ swayosd
 taplo-cli
 ttf-cascadia-mono-nerd
 ttf-jetbrains-mono
+ueberzugpp
 ufw
 ufw-docker
 vim
@@ -69,5 +70,6 @@ xorg-server
 xorg-xinit
 xorg-xwayland
 xwayland-satellite
+yazi
 zen-browser-bin
 zram-generator
