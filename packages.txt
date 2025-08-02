@@ -4,8 +4,6 @@ base-devel
 blueberry
 brightnessctl
 btop
-chaotic-keyring
-chaotic-mirrorlist
 docker
 docker-buildx
 docker-compose
@@ -71,7 +69,5 @@ xorg-server
 xorg-xinit
 xorg-xwayland
 xwayland-satellite
-yay
-yay-debug
 zen-browser-bin
 zram-generator
