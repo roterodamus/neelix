@@ -159,7 +159,7 @@ window-rule {
     clip-to-geometry true
 }
 
-hotkey-overlay {
+/-hotkey-overlay {
     skip-at-startup
 }
 
@@ -314,5 +314,5 @@ binds {
     Mod+D hotkey-overlay-title="Alt Launcher" { spawn "fuzzel"; }
     Mod+o { toggle-overview; }
     Mod+b hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
-    Mod+Shift+Print { spawn "Bin/peripage-python/periclip-wl.sh"; }
+    //Mod+Shift+Print { spawn "Bin/peripage-python/periclip-wl.sh"; }
 }
