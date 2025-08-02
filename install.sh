@@ -136,9 +136,6 @@ fi
 # Install content of packages.txt, docker, firewall & services
 # =======================================================
 
-mkdir -p ~/.config
-cp -R config/* ~/.config/
-
 yay -S --needed --noconfirm - < packages.txt
 
 # Limit log size to avoid running out of disk
