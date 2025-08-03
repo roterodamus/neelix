@@ -52,6 +52,7 @@ efibootmgr
 fastfetch
 flatpak
 hyprlock
+keyd
 pamixer
 polkit-gnome
 power-profiles-daemon
