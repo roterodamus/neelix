@@ -186,7 +186,6 @@ sudo systemctl daemon-reload
 
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
-systemctl --user enable wayland-pipewire-idle-inhibit.service
 sudo systemctl enable swayosd-libinput-backend.service
 sudo systemctl enable docker.service
 
