@@ -65,7 +65,7 @@ input {
 }
 
 cursor {
-    hide-after-inactive-ms 500
+    hide-after-inactive-ms 5000
 }
 
 layout {
