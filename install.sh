@@ -132,23 +132,23 @@ fi
 # Install greeter and configure autologin
 # =======================================================
 
-pacman -S --needed --noconfirm greetd greetd-tuigreet
+sudo pacman -S --needed --noconfirm greetd greetd-agreety greetd-tuigreet
 
 # === Create greeter user (if not already existing)
-id greeter &>/dev/null || useradd -M -r -G video greeter
+id greeter &>/dev/null || sudo useradd -M -r -G video greeter
 
 # === Prepare the cache dir so tuigreet's remember functions work
-mkdir -p /var/cache/tuigreet
-chown greeter:greeter /var/cache/tuigreet
-chmod 0755 /var/cache/tuigreet
+sudo mkdir -p /var/cache/tuigreet
+sudo chown greeter:greeter /var/cache/tuigreet
+sudo chmod 0755 /var/cache/tuigreet
 
 # === Suppress conflicting getty on tty1, if any
 if systemctl list-unit-files | grep -q 'getty@tty1'; then
-  systemctl mask getty@tty1.service
+ sudo systemctl mask getty@tty1.service
 fi
 
 # === Generate greeting config
-cat > /etc/greetd/config.toml <<'EOF'
+sudo cat > /etc/greetd/config.toml <<'EOF'
 [terminal]
 vt = 2           # Changed to vt 2 to avoid agetty and systemd console mess
                  # (note: you can choose another unused VT)
@@ -161,15 +161,15 @@ user = "$USER"
 EOF
 
 # (Optional) set environment variables or session wrappers:
- echo "niri" > /etc/greetd/environments
+sudo echo "niri" > /etc/greetd/environments
 
 # === Fix directory perms
-chown -R greeter:greeter /etc/greetd
-chmod -R 0644 /etc/greetd
+sudo chown -R greeter:greeter /etc/greetd
+sudo chmod -R 0644 /etc/greetd
 
 # === Override greetd.service so it waits until all jobs are dispatched
-mkdir -p /etc/systemd/system/greetd.service.d
-cat > /etc/systemd/system/greetd.service.d/override.conf <<'EOF'
+sudo mkdir -p /etc/systemd/system/greetd.service.d
+sudo cat > /etc/systemd/system/greetd.service.d/override.conf <<'EOF'
 [Service]
 Type=idle
 StandardInput=tty
@@ -180,8 +180,8 @@ TTYVTDisallocate=yes
 EOF
 
 # === Enable
-systemctl daemon-reload
-systemctl enable greetd.service
+sudo systemctl daemon-reload
+sudo systemctl enable greetd.service
 
 # =======================================================
 # Install content of packages.txt, docker, firewall & services
