@@ -132,7 +132,7 @@ fi
 # Install greeter (future plans: configure autologin)
 # =======================================================
 
-sudo pacman -S ly
+sudo pacman -S --needed --noconfirm ly
 
 sudo systemctl daemon-reload
 sudo systemctl enable ly.service
