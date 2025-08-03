@@ -49,18 +49,6 @@
 - **Wayland native**: Smooth HiDPI, fractional scaling.
 - **Custom scripts**: Productivity & workflow enhancements.
 
----
-
-## 📦 Components
-
-| Component | Purpose |
-|----------:|:--------|
-| Helix     | Main text/code editor |
-| Niri      | Window management |
-| Waybar    | Status bar |
-| Swaylock  | Screen locking |
-| Foot      | Terminal emulator |
-| Custom scripts | Keybindings, screenshots, etc. |
 
 ---
 
