@@ -61,7 +61,6 @@ zram-generator
 
 # Desktop Environment
 fuzzel
-ly
 mako
 niri
 swaybg
