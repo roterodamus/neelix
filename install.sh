@@ -189,8 +189,8 @@ chmod +x ~/.config/bin/battery-monitor
 mkdir -p ~/Pictures
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
-sudo cp misc/remapperoverview/remapperoverview.service /etc/systemd/system/remapperoverview.service
-sudo cp misc/remapperoverview/remapperoverview.sh /usr/local/bin/remapperoverview.sh
+sudo cp misc/remapperoverview/remapoverview.service /etc/systemd/system/remapoverview.service
+sudo cp misc/remapperoverview/remapoverview.sh /usr/local/bin/remapoverview.sh
 sudo mkdir /etc/keyd/
 sudo cp misc/remapperoverview/keyd/overview-open.conf /etc/keyd/overview-open.conf
 sudo cp misc/remapperoverview/keyd/overview-closed.conf /etc/keyd/overview-closed.conf
