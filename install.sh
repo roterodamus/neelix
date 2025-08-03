@@ -129,62 +129,16 @@ if [ -n "$(lspci | grep -i 'nvidia')" ]; then
 fi
 
 # =======================================================
-# Install greeter and configure autologin
+# Install greeter (future plans: configure autologin)
 # =======================================================
 
-sudo pacman -S --needed --noconfirm greetd greetd-agreety greetd-tuigreet
+sudo pacman -S ly
 
-# === Create greeter user (if not already existing)
-id greeter &>/dev/null || sudo useradd -M -r -G video greeter
-
-# === Prepare the cache dir so tuigreet's remember functions work
-sudo mkdir -p /var/cache/tuigreet
-sudo chown greeter:greeter /var/cache/tuigreet
-sudo chmod 0755 /var/cache/tuigreet
-
-# === Suppress conflicting getty on tty1, if any
-if systemctl list-unit-files | grep -q 'getty@tty1'; then
- sudo systemctl mask getty@tty1.service
-fi
-
-# === Generate greeting config
-sudo cat > /etc/greetd/config.toml <<'EOF'
-[terminal]
-vt = 2           # Changed to vt 2 to avoid agetty and systemd console mess
-                 # (note: you can choose another unused VT)
-[default_session]
-command = "tuigreet --remember --remember-session --cmd niri"
-user = "greeter"
-[initial_session]
-command = "niri"
-user = "$USER"
-EOF
-
-# (Optional) set environment variables or session wrappers:
-sudo echo "niri" > /etc/greetd/environments
-
-# === Fix directory perms
-sudo chown -R greeter:greeter /etc/greetd
-sudo chmod -R 0644 /etc/greetd
-
-# === Override greetd.service so it waits until all jobs are dispatched
-sudo mkdir -p /etc/systemd/system/greetd.service.d
-sudo cat > /etc/systemd/system/greetd.service.d/override.conf <<'EOF'
-[Service]
-Type=idle
-StandardInput=tty
-StandardOutput=tty
-TTYReset=yes
-TTYVHangup=yes
-TTYVTDisallocate=yes
-EOF
-
-# === Enable
 sudo systemctl daemon-reload
-sudo systemctl enable greetd.service
+sudo systemctl enable ly.service
 
 # =======================================================
-# Install content of packages.txt, docker, firewall & services
+# Install content of packages.txt, docker, firewall 
 # =======================================================
 
 yay -S --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
@@ -203,7 +157,6 @@ sudo tee /etc/systemd/system/docker.service.d/no-block-boot.conf <<'EOF'
 DefaultDependencies=no
 EOF
 
-rustup install stable
 
 # Allow nothing in, everything out
 sudo ufw default deny incoming
@@ -220,6 +173,12 @@ sudo ufw enable
 # Turn on Docker protections
 sudo ufw-docker install
 sudo ufw reload
+
+# =======================================================
+# Enable misc. services & stuff
+# =======================================================
+
+rustup install stable
 
 chmod +x ~/.config/bin/battery-monitor
 
