@@ -80,11 +80,9 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
-       // off
         width 2
         inactive-color "#505050"
         active-gradient from="#33ccffee" to="#00ff99ee" angle=45
-        //inactive-gradient from="#505050" to="#ffffff" angle=45 relative-to="workspace-view"
     }
 
     border {
@@ -124,8 +122,18 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"foot$"#
+    match app-id=r#"Alacritty$"#
     opacity 0.99
+}
+
+window-rule {
+    match app-id=r#"foot$"#
+    opacity 0.97
+}
+
+window-rule {
+    match app-id=r#"Yazi$"#
+    opacity 0.96
 }
 
 window-rule {
@@ -313,6 +321,7 @@ binds {
     Mod+Space hotkey-overlay-title="Launcher" { spawn "walker"; }
     Mod+D hotkey-overlay-title="Alt Launcher" { spawn "fuzzel"; }
     Mod+o { toggle-overview; }
-    Mod+b hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
+    Mod+Shift+B hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
+    Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--app-id=Yazi" "yazi"; }
     //Mod+Shift+Print { spawn "Bin/peripage-python/periclip-wl.sh"; }
 }
