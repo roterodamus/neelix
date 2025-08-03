@@ -1,4 +1,4 @@
-# Pertinacious Arch/Niri Setup
+# Neelix, The Pertinacious Arch/Niri Setup
 
                                     ░▓▓▓▓░                                    
                          ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░                                
