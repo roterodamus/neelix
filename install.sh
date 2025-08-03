@@ -197,6 +197,7 @@ sudo cp misc/remapperoverview/keyd/overview-closed.conf /etc/keyd/overview-close
 
 sudo systemctl daemon-reload
 
+sudo systemctl enable keyd.service
 sudo systemctl enable remapoverview.service
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
