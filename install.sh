@@ -157,10 +157,10 @@ EOF
 
 # Set permissions for greetd configuration
 sudo chown -R greeter:greeter /etc/greetd
-# sudo chmod -R go+r /etc/greetd/
+sudo chmod -R go+r /etc/greetd/
 
 # Enable and start greetd service
-sudo systemctl enable --now greetd.service
+sudo systemctl enable greetd.service
 
 # =======================================================
 # Install content of packages.txt, docker, firewall & services
