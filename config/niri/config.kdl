@@ -321,7 +321,7 @@ binds {
     Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+Space hotkey-overlay-title="Launcher" { spawn "walker"; }
     Mod+D hotkey-overlay-title="Alt Launcher" { spawn "fuzzel"; }
-    Mod+o { toggle-overview; }
+    Mod+Tab { toggle-overview; }
     Mod+Shift+B hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
     Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--app-id=Yazi" "yazi"; }
     //Mod+Shift+Print { spawn "Bin/peripage-python/periclip-wl.sh"; }
