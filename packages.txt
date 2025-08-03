@@ -63,6 +63,7 @@ zram-generator
 fuzzel
 mako
 niri
+swaddle
 swaybg
 swayidle
 swayosd
@@ -74,7 +75,6 @@ xdg-utils
 xorg-server
 xorg-xinit
 xorg-xwayland
-#wayland-pipewire-idle-inhibit
 xwayland-satellite
 yazi
 
