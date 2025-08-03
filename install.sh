@@ -157,6 +157,12 @@ sudo tee /etc/systemd/system/docker.service.d/no-block-boot.conf <<'EOF'
 DefaultDependencies=no
 EOF
 
+# Enable ufw and docker services
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable docker.service
+sudo systemctl enable ufw.service
 
 # Allow nothing in, everything out
 sudo ufw default deny incoming
@@ -187,7 +193,6 @@ sudo systemctl daemon-reload
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
 sudo systemctl enable swayosd-libinput-backend.service
-sudo systemctl enable docker.service
 
 sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
