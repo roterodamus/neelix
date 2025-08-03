@@ -188,6 +188,9 @@ rustup install stable
 
 chmod +x ~/.config/bin/battery-monitor
 
+mkdir -p ~/Pictures
+ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
+
 sudo systemctl daemon-reload
 
 systemctl --user enable battery-monitor.service
