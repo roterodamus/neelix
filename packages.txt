@@ -1,5 +1,6 @@
 # Terrminal Emulators
 foot
+foot-terminfo
 
 # Base System
 base
