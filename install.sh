@@ -127,10 +127,40 @@ if [ -n "$(lspci | grep -i 'nvidia')" ]; then
 
   sudo mkinitcpio -P
 fi
+
 # =======================================================
-# Autologin
+# Install greeter and configure autologin
 # =======================================================
 
+sudo pacman -S --noconfirm greetd greetd-tuigreet
+
+# Create a greeter user
+sudo useradd -M -G video greeter
+
+
+# Create the greetd configuration file
+cat > /etc/greetd/config.toml <<EOF
+[terminal]
+# run tuigreet on vt 1 (default for greetd)
+vt = 1
+
+[default_session]
+command = "tuigreet --remember-session --cmd niri"
+user = "greeter"
+
+[initial_session]
+# auto-login once per boot as your user
+command = "niri"
+user = "$USER"
+EOF
+
+
+# Set permissions for greetd configuration
+sudo chown -R greeter:greeter /etc/greetd
+# sudo chmod -R go+r /etc/greetd/
+
+# Enable and start greetd service
+sudo systemctl enable --now greetd.service
 
 # =======================================================
 # Install content of packages.txt, docker, firewall & services
@@ -179,7 +209,6 @@ systemctl --user enable battery-monitor.timer
 systemctl --user enable wayland-pipewire-idle-inhibit.service
 sudo systemctl enable swayosd-libinput-backend.service
 sudo systemctl enable docker.service
-sudo systemctl enable ly.service
 
 sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
