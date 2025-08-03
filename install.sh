@@ -36,14 +36,12 @@ fi
 if ! command -v yay &>/dev/null; then
   # Install build tools
   sudo pacman -Sy --needed --noconfirm base-devel
-  cd /tmp
   rm -rf yay-bin
   git clone https://aur.archlinux.org/yay-bin.git
   cd yay-bin
   makepkg -si --noconfirm
   cd -
   rm -rf yay-bin
-  cd ~
 fi
 
 # Add fun and color to the pacman installer
@@ -191,8 +189,15 @@ chmod +x ~/.config/bin/battery-monitor
 mkdir -p ~/Pictures
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
+sudo cp misc/remapperoverview/remapperoverview.service /etc/systemd/system/remapoverview.service
+sudo cp misc/remapperoverview/remapperoverview.sh /usr/local/bin/remapoverview.sh
+sudo mkdir /etc/keyd/
+sudo cp misc/remapperoverview/keyd/overview-open.conf /etc/keyd/overview-open.conf
+sudo cp misc/remapperoverview/keyd/overview-closed.conf /etc/keyd/overview-closed.conf
+
 sudo systemctl daemon-reload
 
+sudo systemctl enable remapoverview.service
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
 sudo systemctl enable swayosd-libinput-backend.service
