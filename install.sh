@@ -192,9 +192,9 @@ ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 sudo cp misc/remapperoverview/remapoverview.service /etc/systemd/system/remapoverview.service
 sudo cp misc/remapperoverview/remapoverview.sh /usr/local/bin/remapoverview.sh
 sudo chmod +x /usr/local/bin/remapoverview.sh
-sudo mkdir /etc/keyd/
-sudo cp misc/remapperoverview/keyd/overview-open.conf /etc/keyd/overview-open.conf
-sudo cp misc/remapperoverview/keyd/overview-closed.conf /etc/keyd/overview-closed.conf
+sudo mkdir -P /etc/keyd/overview/
+sudo cp misc/remapperoverview/keyd/overview-open.conf /etc/keyd/overview/overview-open.conf
+sudo cp misc/remapperoverview/keyd/overview-closed.conf /etc/keyd/overview/overview-closed.conf
 
 sudo systemctl daemon-reload
 
