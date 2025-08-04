@@ -7,8 +7,8 @@ NIRI_SOCKET=$(find /run/user/$USER_ID/niri* -type s -name '*.sock' -print -quit)
 
 export NIRI_SOCKET
 
-OG_CONF="/etc/keyd/overview-closed.conf"
-ON_CONF="/etc/keyd/overview-open.conf"
+OG_CONF="/etc/keyd/overview/overview-closed.conf"
+ON_CONF="/etc/keyd/overview/overview-open.conf"
 SYMLINK="/etc/keyd/default.conf"
 
 prev="unknown"
