@@ -44,20 +44,27 @@ ttf-jetbrains-mono
 # Image and Graphics
 imagemagick
 imv
+ffmpeg
+resvg
 
 # System Utilities
+7zip
 brightnessctl
 btop
 efibootmgr
 fastfetch
+fd
 flatpak
+fzf
 hyprlock
 keyd
 pamixer
 polkit-gnome
 power-profiles-daemon
+rg
 smartmontools
 wiremix
+zoxide
 zram-generator
 
 # Desktop Environment
@@ -85,7 +92,9 @@ nano
 vim
 
 # Miscellaneous
+jq
 localsend-bin
+poppler
 zen-browser-bin
 hunspell-en_us
 hunspell
