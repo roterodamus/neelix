@@ -1,4 +1,4 @@
-spawn-at-startup "swaybg" "-i" ".config/Wallpapers/1-kanagawa.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" ".config/Wallpapers/1-everforest.jpg" "-m" "fill"
 spawn-at-startup "waybar"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "swaddle"
