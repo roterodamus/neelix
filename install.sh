@@ -130,10 +130,24 @@ fi
 # Install greeter (future plans: configure autologin)
 # =======================================================
 
-sudo pacman -S --needed --noconfirm ly
+sudo pacman --noconfirm -S greetd greetd-tuigreet niri
 
-sudo systemctl daemon-reload
-sudo systemctl enable ly.service
+sudo mkdir -p /etc/greetd
+cat <<EOF | sudo tee /etc/greetd/config.toml > /dev/null
+[terminal]
+vt = 1
+
+[initial_session]
+command = "niri"
+user = "$(whoami)"
+
+[default_session]
+command = "tuigreet --cmd 'niri'"
+user = "$(whoami)"
+EOF
+
+sudo systemctl enable greetd.service
+sudo systemctl set-default graphical.target
 
 # =======================================================
 # Install content of packages.txt, docker, firewall 
