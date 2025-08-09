@@ -56,6 +56,7 @@ fastfetch
 fd
 flatpak
 fzf
+gnome-keyring
 hyprlock
 keyd
 pamixer
