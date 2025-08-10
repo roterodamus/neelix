@@ -60,7 +60,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "foot --app-id=nmtui -e nmtui"
+    "on-click": "foot sh -c 'sleep .15; nmtui'"
   },
   "battery": {
     "format": "{capacity}% {icon}",
