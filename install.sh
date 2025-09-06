@@ -193,6 +193,16 @@ sudo ufw-docker install
 sudo ufw reload
 
 # =======================================================
+# Enable flatpak and bazaar
+# =======================================================
+
+sudo pacman -Syu --noconfirm --needed flatpak xdg-desktop-portal xdg-desktop-portal-gtk
+
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install -y --noninteractive flathub io.github.kolunmi.Bazaar
+
+# =======================================================
 # Enable misc. services & stuff
 # =======================================================
 
