@@ -9,7 +9,6 @@ linux
 linux-firmware
 
 # Development Tools
-bazaar-git
 docker
 docker-buildx
 docker-compose
