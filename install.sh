@@ -213,17 +213,8 @@ chmod +x ~/.config/bin/battery-monitor
 mkdir -p ~/Pictures
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
-sudo cp misc/remapoverview/remapoverview.service /etc/systemd/system/remapoverview.service
-sudo cp misc/remapoverview/remapoverview.sh /usr/local/bin/remapoverview.sh
-sudo chmod +x /usr/local/bin/remapoverview.sh
-sudo mkdir -p /etc/keyd/overview/
-sudo cp misc/remapoverview/keyd/overview-open.conf /etc/keyd/overview/overview-open.conf
-sudo cp misc/remapoverview/keyd/overview-closed.conf /etc/keyd/overview/overview-closed.conf
-
 sudo systemctl daemon-reload
 
-sudo systemctl enable keyd.service
-sudo systemctl enable remapoverview.service
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
 sudo systemctl enable swayosd-libinput-backend.service
