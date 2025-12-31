@@ -53,13 +53,11 @@ gnome-keyring
 hyprlock
 keyd
 pamixer
-polkit-gnome
+polkit-kde-agent
 power-profiles-daemon
 rg
 smartmontools
 wiremix
-zoxide
-zram-generator
 
 # Desktop Environment
 fuzzel
@@ -69,13 +67,10 @@ swaddle
 swaybg
 swayidle
 swayosd
-walker-bin
 waybar
 wl-clipboard
 xdg-desktop-portal-gnome
 xdg-utils
-xorg-server
-xorg-xinit
 xorg-xwayland
 xwayland-satellite
 yazi
@@ -83,18 +78,11 @@ yazi
 # Text Editors
 helix
 nano
-vim
 
 # Miscellaneous
 jq
 localsend-bin
-poppler
 zen-browser-bin
 hunspell-en_us
 hunspell
 
-# Intel
-vulkan-intel
-intel-media-driver
-intel-ucode
-libva-intel-driver
