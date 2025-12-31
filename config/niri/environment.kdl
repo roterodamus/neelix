@@ -1,0 +1,13 @@
+prefer-no-csd
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+    GTK_CSD "0"
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+

@@ -1,0 +1,66 @@
+hotkey-overlay {
+    skip-at-startup
+}
+
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="launcher"
+    baba-is-float true
+}
+
+layout {
+    gaps 8
+    center-focused-column "never"
+    background-color "transparent"
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+    }
+
+    default-column-width { proportion 0.5; }
+
+    focus-ring {
+        width 1
+        inactive-color "#505050"
+        active-gradient from="#cdd6f4ee" to="#9aa3c1ee" angle=45
+    }
+
+    border {
+        off
+        width 2
+        active-color "#ffc87f"
+        inactive-color "#505050"
+    }
+
+    shadow {
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    struts {
+    }
+}
+
+overview {
+    zoom 0.50
+    workspace-shadow {
+        off
+    }
+}
+recent-windows {
+    highlight {
+        corner-radius 14
+    }
+    debounce-ms 0
+    open-delay-ms 0
+}
+
+animations {
+}

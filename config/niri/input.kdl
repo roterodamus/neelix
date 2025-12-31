@@ -1,0 +1,34 @@
+input {
+    focus-follows-mouse max-scroll-amount="90%"
+    keyboard {
+        xkb {
+        }
+    }
+    
+    touchpad {
+        tap
+        dwt
+        natural-scroll
+        tap-button-map "left-right-middle"
+        click-method	"button-areas"
+        // map-to-output "DVI-D-1"
+    }
+    
+    tablet {
+        map-to-output "DVI-D-1"
+    }
+    touch {
+        map-to-output "DVI-D-1"
+    }
+    
+    mouse {
+    }
+    
+    trackpoint {
+    }
+    
+}
+
+cursor {
+    hide-after-inactive-ms 500
+}
