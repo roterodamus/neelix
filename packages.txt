@@ -26,6 +26,7 @@ wireless_tools
 
 # Themes and Fonts
 gnome-themes-extra
+kvantum
 kvantum-qt5
 noto-fonts-cjk
 noto-fonts-emoji
@@ -33,6 +34,8 @@ noto-fonts-extra
 otf-font-awesome
 ttf-cascadia-mono-nerd
 ttf-jetbrains-mono
+qt5-wayland
+qt6-wayland
 
 # Image and Graphics
 imagemagick
@@ -49,7 +52,7 @@ fastfetch
 fd
 flatpak
 fzf
-gnome-keyring
+gnome-keyrin
 hyprlock
 keyd
 pamixer
@@ -70,6 +73,7 @@ swayosd
 waybar
 wl-clipboard
 xdg-desktop-portal-gnome
+xdg-desktop-portal-gtk
 xdg-utils
 xorg-xwayland
 xwayland-satellite
@@ -85,4 +89,3 @@ localsend-bin
 zen-browser-bin
 hunspell-en_us
 hunspell
-
