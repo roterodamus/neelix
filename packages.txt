@@ -76,7 +76,6 @@ wl-clipboard
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
 xdg-utils
-xorg-xwayland
 xwayland-satellite
 yazi
 
