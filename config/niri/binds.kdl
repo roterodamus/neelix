@@ -10,7 +10,7 @@ binds {
     Mod+Space hotkey-overlay-title="Launcher" { spawn "fuzzel"; }
     Mod+Ctrl+Tab { toggle-overview; }
     Mod+Alt+Space hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
-    Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--app-id=Yazi" "yazi"; }
+    Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--title=Yazi" "yazi"; }
     Mod+Print { spawn "Bin/peripage-python/periclip-wl.sh"; }
     Mod+Shift+Comma hotkey-overlay-title="Open Niri config in Helix" { spawn-sh "foot -TNiri-Config helix .config/niri/"; }
     
