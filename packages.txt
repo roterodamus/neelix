@@ -43,6 +43,7 @@ resvg
 
 # System Utilities
 7zip
+bluetui
 brightnessctl
 btop
 efibootmgr
