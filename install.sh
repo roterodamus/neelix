@@ -7,6 +7,8 @@
 mkdir -p ~/.config
 cp -R config/* ~/.config/
 
+mkdir -p ~/.local/share/applications
+cp -R hidden-apps/* ~/.local/share/applications/
 # =======================================================
 # Install chaotic aur & yay
 # =======================================================
