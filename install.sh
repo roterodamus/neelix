@@ -138,11 +138,11 @@ cat <<EOF | sudo tee /etc/greetd/config.toml > /dev/null
 vt = 1
 
 [initial_session]
-command = "niri"
+command = "niri-session"
 user = "$(whoami)"
 
 [default_session]
-command = "tuigreet --cmd 'niri'"
+command = "tuigreet --cmd 'niri-session'"
 user = "$(whoami)"
 EOF
 
