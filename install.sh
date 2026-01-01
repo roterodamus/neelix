@@ -224,6 +224,8 @@ sudo systemctl enable swayosd-libinput-backend.service
 sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
 
+sudo chsh -s /usr/bin/fish $USER
+
 dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
 
 reboot
