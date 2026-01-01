@@ -89,7 +89,7 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
+    "on-click": "foot --app-id=Bluetui --title=Bluetooth -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
