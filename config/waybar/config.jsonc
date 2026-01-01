@@ -42,7 +42,7 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "foot --app-id=Btop --title=Btop btop"
+    "on-click": "foot --title=Btop btop"
   },
   "clock": {
     "format": "{:%A %H:%M}",
@@ -60,7 +60,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "foot --app-id=Network-Manager --title=Network-Manager sh -c 'sleep .15; nmtui'"
+    "on-click": "foot --title=Network-Manager sh -c 'sleep .15; nmtui'"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -89,11 +89,11 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "foot --app-id=Bluetui --title=Bluetooth -e bluetui"
+    "on-click": "foot --title=Bluetooth-Settings -e bluetui"
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "foot --app-id=Wiremix --title=Wiremix -e wiremix",
+    "on-click": "foot --title=Audio-Settings -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
