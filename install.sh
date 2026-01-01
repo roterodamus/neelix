@@ -142,7 +142,7 @@ command = "niri-session"
 user = "$(whoami)"
 
 [default_session]
-command = "tuigreet --cmd 'niri-session'"
+command = "tuigreet --user-menu --cmd 'niri-session'"
 user = "$(whoami)"
 EOF
 
