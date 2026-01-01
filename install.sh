@@ -155,7 +155,7 @@ sudo systemctl set-default graphical.target
 # Install content of packages.txt, docker, firewall 
 # =======================================================
 
-yay -S --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
+yay -Syu --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
 
 # Limit log size to avoid running out of disk
 sudo mkdir -p /etc/docker
