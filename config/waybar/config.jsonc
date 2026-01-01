@@ -1,9 +1,9 @@
 {
   "reload_style_on_change": true,
   "layer": "top",
-  "position": "top",
+  "position": "bottom",
   "spacing": 0,
-  "height": 26,
+  "height": 22,
   "modules-left": [
     "niri/workspaces",
     "niri/window"
@@ -42,7 +42,7 @@
   "cpu": {
     "interval": 5,
     "format": "󰍛",
-    "on-click": "foot -e btop"
+    "on-click": "foot --app-id=Btop --title=Btop btop"
   },
   "clock": {
     "format": "{:%A %H:%M}",
@@ -60,7 +60,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "foot sh -c 'sleep .15; nmtui'"
+    "on-click": "foot --app-id=Network-Manager --title=Network-Manager sh -c 'sleep .15; nmtui'"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -93,7 +93,7 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "foot --app-id=Wiremix -e wiremix",
+    "on-click": "foot --app-id=Wiremix --title=Wiremix -e wiremix",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "scroll-step": 5,
