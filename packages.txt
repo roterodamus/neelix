@@ -39,6 +39,7 @@ qt6-wayland
 imagemagick
 imv
 ffmpeg
+mpv
 resvg
 
 # System Utilities
