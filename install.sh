@@ -215,7 +215,15 @@ rustup install stable
 
 chmod +x ~/.config/bin/battery-monitor
 
+mkdir -p ~/Desktop
+mkdir -p ~/Documents
+mkdir -p ~/Downloads
+mkdir -p ~/Music
 mkdir -p ~/Pictures
+mkdir -p ~/Public
+mkdir -p ~/Templates
+mkdir -p ~/Videos
+
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
 sudo systemctl daemon-reload
