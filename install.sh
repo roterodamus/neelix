@@ -238,4 +238,6 @@ sudo usermod -aG uucp $USER
 
 sudo chsh -s /usr/bin/fish $USER
 
+trash ~/neelix/
+
 reboot
