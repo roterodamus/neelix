@@ -226,7 +226,4 @@ sudo usermod -aG uucp $USER
 
 sudo chsh -s /usr/bin/fish $USER
 
-kvantummanager --set KvGnomeDark
-dconf write /org/gnome/desktop/interface/color-scheme '"prefer-dark"'
-
 reboot
