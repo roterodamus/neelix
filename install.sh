@@ -214,6 +214,7 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 rustup install stable
 
 chmod +x ~/.config/bin/battery-monitor
+chmod +x ~/.config/realtime-setup.sh
 
 mkdir -p ~/Desktop
 mkdir -p ~/Documents
