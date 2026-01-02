@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Helix (in Foot)
+Comment=Edit text files with Helix inside Foot terminal
+Exec=foot -e helix %F
+Icon=utilities-text-editor
+Terminal=false
+Type=Application
+Categories=Utility;TextEditor;
+MimeType=text/plain;
+Hidden=true
