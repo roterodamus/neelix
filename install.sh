@@ -190,8 +190,6 @@ sudo ufw allow 22/tcp
 sudo ufw allow in on docker0 to any port 53
 # Turn on the firewall
 sudo ufw enable
-# Turn on Docker protections
-sudo ufw-docker install
 sudo ufw reload
 
 # =======================================================
