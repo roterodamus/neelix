@@ -66,6 +66,8 @@ wiremix
 # Desktop Environment
 fuzzel
 mako
+nautilus
+nautilus-open-any-terminal
 niri
 swaybg
 swayidle
