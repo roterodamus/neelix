@@ -61,6 +61,7 @@ polkit-kde-agent
 power-profiles-daemon
 rg
 smartmontools
+trash-cli
 wiremix
 
 # Desktop Environment
