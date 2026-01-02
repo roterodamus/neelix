@@ -6,6 +6,7 @@ function fish_greeting
 end
 
 set -x SUDO_EDITOR /usr/bin/helix
+set -x EDITOR /usr/bin/helix
 set -x NEWT_COLORS "root=white,black \
         border=black,lightgray \
         window=lightgray,lightgray \
