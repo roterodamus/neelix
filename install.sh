@@ -132,7 +132,7 @@ fi
 # Install greeter (future plans: configure autologin)
 # =======================================================
 
-sudo pacman --noconfirm -S greetd greetd-tuigreet niri
+sudo pacman --needed --noconfirm -S greetd greetd-tuigreet niri
 
 sudo mkdir -p /etc/greetd
 cat <<EOF | sudo tee /etc/greetd/config.toml > /dev/null
