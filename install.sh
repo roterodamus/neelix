@@ -215,6 +215,7 @@ ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
 sudo systemctl daemon-reload
 
+systemctl --user enable foot-server.service
 systemctl --user enable battery-monitor.service
 systemctl --user enable battery-monitor.timer
 sudo systemctl enable swayosd-libinput-backend.service
