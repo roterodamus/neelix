@@ -206,6 +206,11 @@ flatpak install -y --noninteractive flathub io.github.kolunmi.Bazaar
 # Enable misc. services & stuff
 # =======================================================
 
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
+
 rustup install stable
 
 chmod +x ~/.config/bin/battery-monitor
