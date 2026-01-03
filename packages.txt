@@ -3,6 +3,7 @@ foot
 foot-terminfo
 
 # Development Tools
+base-devel
 binutils
 debugedit
 docker
@@ -56,9 +57,8 @@ fd
 fish
 flatpak
 fzf
-gnome-keyrin
+gnome-keyring
 hyprlock
-keyd
 pamixer
 polkit-kde-agent
 power-profiles-daemon
