@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install the required packages
-sudo pacman -Syu realtime-privileges cpupower
+sudo pacman -Syu --needed --noconfirm realtime-privileges cpupower
 
 # Append limits to /etc/security/limits.conf
 {
