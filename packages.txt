@@ -3,9 +3,12 @@ foot
 foot-terminfo
 
 # Development Tools
+binutils
+debugedit
 docker
 docker-buildx
 docker-compose
+fakeroot
 gdb
 git
 lldb
@@ -75,6 +78,7 @@ swayidle
 swayosd
 waybar
 wl-clipboard
+xdg-desktop-portal
 xdg-desktop-portal-gnome
 xdg-desktop-portal-gtk
 xdg-utils
