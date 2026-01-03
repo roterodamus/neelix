@@ -27,3 +27,19 @@ sudo sysctl -p /etc/sysctl.d/99-swappiness.conf
 } | sudo tee -a /etc/default/cpupower
 
 sudo systemctl enable cpupower.service
+
+echo
+echo "IMPORTANT: Manual steps required:"
+echo
+echo "  1) Add the kernel parameter 'threadirqs' to your boot loader configuration (e.g., GRUB or systemd-boot)."
+echo "     This typically involves editing your boot loader's kernel line and regenerating the config."
+echo "     For more details, see:"
+echo
+echo "     https://wiki.archlinux.org/title/Kernel_parameters#Boot_loader_configuration"
+echo
+echo
+echo "  2) Disable Hyper-Threading (SMT) in your system UEFI/BIOS firmware."
+echo "     Reboot, enter the firmware settings, and disable SMT/Hyper-Threading for best realtime performance."
+echo
+echo "After making these changes, reboot the system for them to take effect."
+echo
