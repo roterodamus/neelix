@@ -1,0 +1,1 @@
+spawn-sh-at-startup "swaybg -i .config/Wallpapers/unsplash2.jpg -m fill"

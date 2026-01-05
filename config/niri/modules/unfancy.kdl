@@ -1,0 +1,44 @@
+animations {
+	off
+}
+window-rule {
+	baba-is-float false
+	geometry-corner-radius 0
+	opacity 1.0
+	shadow {
+		off
+	}
+}
+layer-rule {
+	baba-is-float false
+	opacity 1.0
+	shadow {
+		off
+	}
+}
+layout {
+	gaps 0
+	struts {
+		left 1
+		right 1
+		top 1
+		bottom 1	
+	}
+	tab-indicator {
+		width 8
+		gap 0
+		length total-proportion=1.003
+		place-within-column
+	}
+	border {
+        on
+        inactive-color "#505050"
+        active-color "#c0c0c0"
+    }
+	shadow {
+		off
+	}
+}
+binds {
+	Mod+Space hotkey-overlay-title="Launcher" { spawn-sh "fuzzel -r 0 -b 000000ff"; }
+}
