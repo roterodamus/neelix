@@ -1,4 +1,0 @@
-spawn-at-startup "swayidle" "-w" \
-    "timeout" "120" "niri msg action power-off-monitors" \
-    "timeout" "600" "systemctl suspend" \
-    "before-sleep" "hyprlock"
