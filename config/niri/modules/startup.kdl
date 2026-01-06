@@ -1,5 +1,4 @@
 spawn-at-startup "waybar"
 spawn-at-startup "swayosd-server"
-spawn-at-startup "swaddle"
 spawn-at-startup "mako"
 spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
