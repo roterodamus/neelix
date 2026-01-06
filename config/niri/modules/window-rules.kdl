@@ -32,8 +32,12 @@ window-rule {
     open-floating true
 }
 window-rule {
-    match app-id=r#"REAPER$"# title="^REAPER.*$"
+    match title=r#"REAPER V*$"#
     open-fullscreen true
+}
+window-rule {
+    match title="REAPER (initializing)"
+    open-floating true
 }
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
