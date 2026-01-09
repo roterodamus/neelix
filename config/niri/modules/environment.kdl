@@ -1,6 +1,7 @@
 prefer-no-csd
 
 environment {
+    _JAVA_AWT_WM_NONREPARENTING "1"
     QT_STYLE_OVERRIDE "kvantum"
     SDL_VIDEODRIVER "wayland"
     MOZ_ENABLE_WAYLAND "1"
