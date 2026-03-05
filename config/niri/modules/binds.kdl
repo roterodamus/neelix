@@ -8,7 +8,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+Space hotkey-overlay-title="Launcher" { spawn "fuzzel"; }
-    Mod+Ctrl+Tab { toggle-overview; }
+    Mod+o { toggle-overview; }
     Mod+Ctrl+Space hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
     Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--title=Yazi" "yazi"; }
     Mod+Print { spawn "Bin/peripage-python/periclip-wl.sh"; }
