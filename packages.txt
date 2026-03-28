@@ -8,12 +8,6 @@ binutils
 debugedit
 fakeroot
 gdb
-git
-lldb
-marksman
-rust-analyzer
-rustup
-taplo-cli
 wget
 
 # Networking
@@ -51,14 +45,12 @@ efibootmgr
 fastfetch
 fd
 fish
-flatpak
 fzf
 gnome-keyring
 hyprlock
 pamixer
 polkit-kde-agent
 power-profiles-daemon
-rg
 smartmontools
 trash-cli
 wiremix
@@ -87,7 +79,6 @@ nano
 
 # Miscellaneous
 localsend
-jq
 zen-browser-bin
 hunspell-en_us
 hunspell
