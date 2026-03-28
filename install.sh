@@ -98,13 +98,11 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<C
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 
-rustup install stable
-
 chmod +x ~/.config/bin/battery-monitor
 chmod +x ~/neelix/post_install/realtime-setup.sh
 chmod +x ~/neelix/post_install/install_firewall.sh
 chmod +x ~/neelix/post_install/install_docker.sh
-
+chmod +x ~/neelix/post_install/install_devtools.sh
 
 mkdir -p ~/Desktop
 mkdir -p ~/Documents
