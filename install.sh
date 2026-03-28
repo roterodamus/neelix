@@ -76,18 +76,10 @@ sudo systemctl enable greetd.service
 sudo systemctl set-default graphical.target
 
 # =======================================================
-# Install content of packages.txt, docker, firewall 
+# Install content of packages.txt
 # =======================================================
 
 yay -Syu --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
-
-# =======================================================
-# Enable flatpak and bazaar
-# =======================================================
-
-sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-flatpak install -y --noninteractive flathub io.github.kolunmi.Bazaar
 
 # =======================================================
 # Enable misc. services & stuff
@@ -103,6 +95,7 @@ chmod +x ~/neelix/post_install/realtime-setup.sh
 chmod +x ~/neelix/post_install/install_firewall.sh
 chmod +x ~/neelix/post_install/install_docker.sh
 chmod +x ~/neelix/post_install/install_devtools.sh
+chmod +x ~/neelix/post_install/install_flatpak.sh
 
 mkdir -p ~/Desktop
 mkdir -p ~/Documents
