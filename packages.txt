@@ -6,9 +6,6 @@ foot-terminfo
 base-devel
 binutils
 debugedit
-docker
-docker-buildx
-docker-compose
 fakeroot
 gdb
 git
@@ -23,7 +20,6 @@ wget
 iwd
 network-manager-applet
 networkmanager
-ufw
 wireless_tools
 
 # Themes and Fonts
