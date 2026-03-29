@@ -11,7 +11,6 @@ gdb
 wget
 
 # Networking
-iwd
 network-manager-applet
 networkmanager
 wireless_tools
