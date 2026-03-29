@@ -120,6 +120,38 @@ sudo usermod -aG uucp $USER
 
 sudo chsh -s /usr/bin/fish $USER
 
-# trash ~/neelix/
+# =======================================================
+# Prompt user to run post install scripts
+# =======================================================
+
+prompt_run() {
+  local prompt="$1"
+  local cmd="$2"
+  while true; do
+    read -r -p "$prompt [y/n] " ans
+    case "$ans" in
+      [Yy]|[Yy][Ee][Ss])
+        "$cmd"
+        break
+        ;;
+      [Nn]|[Nn][Oo])
+        echo "Skipped: $cmd"
+        break
+        ;;
+      *)
+        echo "Please answer y/yes or n/no."
+        ;;
+    esac
+  done
+}
+
+prompt_run "run test" ./post_install/test.sh
+prompt_run "Install firewall?" ./post_install/install_firewall.sh
+prompt_run "Install Flatpak?" ./post_install/install_flatpak.sh
+prompt_run "Run realtime setup?" ./post_install/realtime-setup.sh
+prompt_run "Install dev tools?" ./post_install/install_devtools.sh
+prompt_run "Install Docker?" ./post_install/install_docker.sh
+
+trash ~/neelix/
 
 reboot
