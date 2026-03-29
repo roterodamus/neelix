@@ -145,13 +145,11 @@ prompt_run() {
   done
 }
 
-prompt_run "run test" ./post_install/test.sh
 prompt_run "Install firewall?" ./post_install/install_firewall.sh
 prompt_run "Install Flatpak?" ./post_install/install_flatpak.sh
 prompt_run "Run realtime setup?" ./post_install/realtime-setup.sh
 prompt_run "Install dev tools?" ./post_install/install_devtools.sh
 prompt_run "Install Docker?" ./post_install/install_docker.sh
-
-trash ~/neelix/
+prompt_run "Delete install folder" trash ~/neelix/
 
 reboot
