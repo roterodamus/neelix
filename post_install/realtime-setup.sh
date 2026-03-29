@@ -56,3 +56,5 @@ echo
 echo "After making these changes, reboot the system for them to take effect."
 echo "Use Millisecond to check if settings are applied"
 echo
+# Prompt to continue
+read -p "Press Enter to continue..."
