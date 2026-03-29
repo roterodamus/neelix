@@ -145,11 +145,30 @@ prompt_run() {
   done
 }
 
+clear
 prompt_run "Install firewall?" ./post_install/install_firewall.sh
+clear
 prompt_run "Install Flatpak?" ./post_install/install_flatpak.sh
+clear
 prompt_run "Run realtime setup?" ./post_install/realtime-setup.sh
+clear
 prompt_run "Install dev tools?" ./post_install/install_devtools.sh
+clear
 prompt_run "Install Docker?" ./post_install/install_docker.sh
-prompt_run "Delete install folder" trash ~/neelix/
+clear
+echo "Moved Neelix install folder to trash"
+trash ~/neelix/
+sleep 2
+clear
+echo "Rebooting in 3 seconds"
+sleep 1
+clear
+echo "Rebooting in 2 seconds"
+sleep 1
+clear
+echo "Rebooting in 1 seconds"
+sleep 1
+clear
+echo "Rebooting"
 
 reboot
