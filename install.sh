@@ -150,7 +150,7 @@ clear
 prompt_run "Install Flatpak?" ./post_install/install_flatpak.sh
 clear
 prompt_run "Run realtime setup?" ./post_install/realtime-setup.sh
-prompt_run "Install dev tools?" ./post_install/install_devtools.sh
+prompt_run "Install Rust dev tools?" ./post_install/install_devtools.sh
 clear
 prompt_run "Install Docker?" ./post_install/install_docker.sh
 clear
