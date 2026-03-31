@@ -1,8 +1,6 @@
-@import "theme.css";
-
 * {
-  background-color: @background;
-  color: @foreground;
+  background-color: transparent;
+  color: #cdd6f4;
 
   border: none;
   border-radius: 0;
@@ -11,6 +9,24 @@
   font-size: 12px;
 }
 
+/* Right-click context menus */
+tooltip {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* For menu items */
+menuitem {
+  background-color: rgba(0, 0, 0, 1);
+  color: #ffffff;
+}
+
+menuitem:hover {
+  background-color: rgba(100, 100, 100, 1);
+}
 .modules-left {
   margin-left: 8px;
 }
