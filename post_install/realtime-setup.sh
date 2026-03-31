@@ -26,6 +26,7 @@ sudo sysctl -p /etc/sysctl.d/99-swappiness.conf
     echo "governor='performance'"
 } | sudo tee -a /etc/default/cpupower
 
+sudo systemctl daemon-reload
 sudo systemctl enable cpupower.service
 
 # Neelix specific things
