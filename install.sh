@@ -96,6 +96,7 @@ chmod +x ~/neelix/post_install/install_firewall.sh
 chmod +x ~/neelix/post_install/install_docker.sh
 chmod +x ~/neelix/post_install/install_devtools.sh
 chmod +x ~/neelix/post_install/install_flatpak.sh
+chmod +x ~/neelix/post_install/install_browser.sh
 
 mkdir -p ~/Desktop
 mkdir -p ~/Documents
@@ -154,6 +155,8 @@ clear
 prompt_run "Install Rust dev tools?" ./post_install/install_devtools.sh
 clear
 prompt_run "Install Docker?" ./post_install/install_docker.sh
+clear
+prompt_run "Install a browser?" ./post_install/install_browser.sh
 clear
 echo "Moved Neelix install folder to trash"
 trash ~/neelix/
