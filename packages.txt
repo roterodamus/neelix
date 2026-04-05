@@ -78,6 +78,5 @@ nano
 
 # Miscellaneous
 localsend
-zen-browser-bin
 hunspell-en_us
 hunspell
