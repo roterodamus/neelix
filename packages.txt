@@ -47,6 +47,7 @@ fish
 fzf
 gnome-keyring
 hyprlock
+jq
 pamixer
 polkit-kde-agent
 power-profiles-daemon
