@@ -1,4 +1,4 @@
-# Neelix, The Pertinacious Arch/Niri Setup
+# Neelix, The Pertinacious Arch/Niri Dotfiles
 
                                     ░▓▓▓▓░                                    
                          ░▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░                                
@@ -36,25 +36,26 @@
                                      ▓▓▓▓▓▓▓░   ░▒▓▓▓▓▓                       
                                          ░▓▓▓▓▓▓▓▓▓░                          
 
-> Minimal & fast tiling setup for Arch Linux + Niri, built around Helix editor.
+> Minimal & fast Niri Dotfiles for Arch Linux
 
 ---
 
 ## ✨ Features
 
-- **Arch Linux**: Lightweight, rolling release base.
-- **Niri**: Next-gen dynamic scrolling Wayland compositor.
-- **Helix**: Modal, fast, and Rust-powered main editor.
+- **Low ram**: Lightweight, using around 650mb in idle.
+- **Niri**: Dynamic scrolling Wayland compositor.
+- **Helix based**: Modal and fast main editor.
 - **Sane defaults**: Clean configs, no bloat.
-- **Wayland native**: Smooth HiDPI, fractional scaling.
-- **Custom scripts**: Productivity & workflow enhancements.
+- **Only dark theme**: Dark everything, white lines.
 
 
 ---
 
 ## ⚙️ Installation
 
-> ⚠ This setup is best suited for **intermediate/advanced** Arch users.
+> ⚠ This setup is best suited for **fresh** Arch install.
+> 
+> Just use ```archinstall``` from the Archiso to install Archlinux.
 
 ```bash
 git clone https://github.com/roterodamus/neelix.git
