@@ -21,13 +21,24 @@ echo "vm.swappiness=10" | sudo tee /etc/sysctl.d/99-swappiness.conf
 # Apply the new sysctl settings
 sudo sysctl -p /etc/sysctl.d/99-swappiness.conf
 
-# Set CPU frequency scaling to peformance
-{
-    echo "governor='performance'"
-} | sudo tee -a /etc/default/cpupower
+# Create the systemd service for CPU frequency scaling
+sudo tee /etc/systemd/system/cpupowergov.service > /dev/null << 'EOF'
+[Unit]
+Description=Set governer to performance 
 
+[Service]
+Type=oneshot
+ExecStart=cpupower frequency-set -g performance
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd and enable the service
 sudo systemctl daemon-reload
-sudo systemctl enable cpupower.service
+sudo systemctl enable cpupowergov.service
+sudo systemctl start cpupowergov.service
 
 # Neelix specific things
 yay -Sy --needed --noconfirm pw-lat millisecond-bin
