@@ -19,12 +19,15 @@ wireless_tools
 gnome-themes-extra
 kvantum
 kvantum-qt5
+noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 otf-font-awesome
 ttf-cascadia-mono-nerd
+ttf-dejavu
 ttf-jetbrains-mono
+ttf-liberation
 qt5-wayland
 qt6-wayland
 
