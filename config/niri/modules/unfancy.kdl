@@ -39,6 +39,3 @@ layout {
 		off
 	}
 }
-binds {
-	Mod+Space hotkey-overlay-title="Launcher" { spawn-sh "fuzzel -r 0 -b 000000ff"; }
-}
