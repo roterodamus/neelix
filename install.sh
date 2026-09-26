@@ -90,14 +90,6 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<C
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 
-chmod +x ~/.config/bin/battery-monitor
-chmod +x ~/neelix/post_install/realtime-setup.sh
-chmod +x ~/neelix/post_install/install_firewall.sh
-chmod +x ~/neelix/post_install/install_docker.sh
-chmod +x ~/neelix/post_install/install_devtools.sh
-chmod +x ~/neelix/post_install/install_flatpak.sh
-chmod +x ~/neelix/post_install/install_browser.sh
-
 mkdir -p ~/Desktop
 mkdir -p ~/Documents
 mkdir -p ~/Downloads
@@ -109,12 +101,6 @@ mkdir -p ~/Videos
 
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
-sudo systemctl daemon-reload
-
-systemctl --user enable battery-monitor.service
-systemctl --user enable battery-monitor.timer
-sudo systemctl enable swayosd-libinput-backend.service
-
 sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
 
@@ -123,6 +109,13 @@ sudo chsh -s /usr/bin/fish $USER
 # =======================================================
 # Prompt user to run post install scripts
 # =======================================================
+
+chmod +x ~/neelix/post_install/realtime-setup.sh
+chmod +x ~/neelix/post_install/install_firewall.sh
+chmod +x ~/neelix/post_install/install_docker.sh
+chmod +x ~/neelix/post_install/install_devtools.sh
+chmod +x ~/neelix/post_install/install_flatpak.sh
+chmod +x ~/neelix/post_install/install_browser.sh
 
 prompt_run() {
   local prompt="$1"
