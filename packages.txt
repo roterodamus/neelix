@@ -4,16 +4,8 @@ foot-terminfo
 
 # Development Tools
 base-devel
-binutils
-debugedit
-fakeroot
-gdb
 wget
 
-# Networking
-network-manager-applet
-networkmanager
-wireless_tools
 
 # Themes and Fonts
 gnome-themes-extra
@@ -40,7 +32,6 @@ resvg
 
 # System Utilities
 7zip
-bluetui
 brightnessctl
 btop
 efibootmgr
@@ -49,25 +40,15 @@ fd
 fish
 fzf
 gnome-keyring
-hyprlock
 jq
-pamixer
-polkit-kde-agent
-power-profiles-daemon
 smartmontools
 trash-cli
-wiremix
 
 # Desktop Environment
-fuzzel
-mako
 nautilus
 nautilus-open-any-terminal
 niri
-swaybg
-swayidle
-swayosd
-waybar
+noctalia
 wl-clipboard
 xdg-desktop-portal
 xdg-desktop-portal-gnome
@@ -78,7 +59,6 @@ yazi
 
 # Text Editors
 helix
-nano
 
 # Miscellaneous
 localsend
