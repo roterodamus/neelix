@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PACKAGES=(brave-bin brave-origin-beta chromium firefox google-chrome helium-browser-bin librewolf waterfox zen-browser-bin)
+PACKAGES=(brave-bin brave-origin-bin chromium firefox google-chrome helium-browser-bin librewolf waterfox zen-browser-bin)
 
 require_pacman() {
   command -v pacman >/dev/null 2>&1 || { echo "pacman not found. This is for Arch Linux." >&2; exit 1; }
