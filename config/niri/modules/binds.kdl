@@ -2,26 +2,25 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
-    Mod+Alt+L hotkey-overlay-title="Lock Device" { spawn "hyprlock"; }
     Mod+Ctrl+Alt+Delete allow-when-locked=true hotkey-overlay-title="Shutdown Now" { spawn "shutdown" "0"; }
     Mod+Ctrl+Shift+S allow-when-locked=true hotkey-overlay-title="Sleep Now" { spawn "systemctl" "suspend"; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
-    Mod+Space hotkey-overlay-title="Launcher" { spawn "fuzzel"; }
+    Mod+Space hotkey-overlay-title="Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+o { toggle-overview; }
     Mod+Ctrl+Space hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
     Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--title=Yazi" "yazi"; }
     // Mod+Print hotkey-overlay-title="print clipboard with peripage" { spawn "Bin/peripage-python/periclip-wl.sh"; }
     Mod+Shift+Comma hotkey-overlay-title="Open Niri config in Helix" { spawn-sh "foot -TNiri-Config helix .config/niri/"; }
+    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
     
-    XF86AudioRaiseVolume     allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
-    XF86AudioLowerVolume     allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
-    XF86AudioMute            allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
-    XF86AudioMicMute         allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; }
-    XF86MonBrightnessUp      allow-when-locked=true { spawn "swayosd-client" "--brightness" "raise"; }
-    XF86MonBrightnessDown    allow-when-locked=true { spawn "swayosd-client" "--brightness" "lower"; }
-    Mod+XF86MonBrightnessUp    hotkey-overlay-title=null  allow-when-locked=true { spawn "swayosd-client" "--brightness" "100"; }
-    Mod+XF86MonBrightnessDown  hotkey-overlay-title=null  allow-when-locked=true { spawn "swayosd-client" "--brightness" "1"; }
+    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    // Mod+XF86MonBrightnessUp    hotkey-overlay-title=null  allow-when-locked=true { spawn "swayosd-client" "--brightness" "100"; }
+    // Mod+XF86MonBrightnessDown  hotkey-overlay-title=null  allow-when-locked=true { spawn "swayosd-client" "--brightness" "1"; }
     
     Mod+Q { close-window; }
 
