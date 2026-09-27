@@ -8,9 +8,10 @@ binds {
     Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
     Mod+Space hotkey-overlay-title="Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+o { toggle-overview; }
-    Mod+Ctrl+Space hotkey-overlay-title="Toggle Waybar" { spawn "killall" "-SIGUSR1" "waybar"; }
     Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--title=Yazi" "yazi"; }
     // Mod+Print hotkey-overlay-title="print clipboard with peripage" { spawn "Bin/peripage-python/periclip-wl.sh"; }
+    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
     Mod+Shift+Comma hotkey-overlay-title="Open Niri config in Helix" { spawn-sh "foot -TNiri-Config helix .config/niri/"; }
     Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
     
@@ -19,8 +20,8 @@ binds {
     XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
     XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
     XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
-    // Mod+XF86MonBrightnessUp    hotkey-overlay-title=null  allow-when-locked=true { spawn "swayosd-client" "--brightness" "100"; }
-    // Mod+XF86MonBrightnessDown  hotkey-overlay-title=null  allow-when-locked=true { spawn "swayosd-client" "--brightness" "1"; }
+    Mod+XF86MonBrightnessUp    hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg brightness-set 100"; }
+    Mod+XF86MonBrightnessDown  hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg brightness-set 1"; }
     
     Mod+Q { close-window; }
 
@@ -114,8 +115,8 @@ binds {
 
     Mod+BracketLeft  { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+Comma  { consume-window-into-column; }
-    Mod+Period { expel-window-from-column; }
+    Mod+Shift+BracketLeft  { consume-window-into-column; }
+    Mod+Shift+BracketRight { expel-window-from-column; }
 
     Mod+R { switch-preset-column-width; }
     Mod+Shift+R { switch-preset-window-height; }
