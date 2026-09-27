@@ -1,0 +1,100 @@
+[backdrop]
+blur_intensity = 0.099999997764825821
+enabled = true
+tint_intensity = 0.0
+
+[bar]
+order = [ "default", "workspace" ]
+
+    [bar.default]
+    end = [
+        "widget",
+        "tray",
+        "notifications",
+        "clipboard",
+        "network",
+        "bluetooth",
+        "volume",
+        "brightness",
+        "control-center",
+        "battery",
+        "session"
+    ]
+    position = "bottom"
+    radius = 66
+    reserve_space = false
+    shadow = false
+    show_on_workspace_switch = false
+    smart_auto_hide = true
+    start = [ "media" ]
+    thickness = 20
+
+    [bar.workspace]
+    auto_hide = true
+    background_opacity = 0.0
+    center = [ "workspaces" ]
+    end = []
+    margin_ends = 281
+    position = "left"
+    reserve_space = false
+    shadow = false
+    start = []
+    thickness = 18
+
+[calendar]
+
+[control_center.calendar]
+show_week_numbers = true
+
+[shell]
+password_style = "random"
+polkit_agent = true
+settings_window_translucent = true
+show_location = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    session_placement = "floating"
+    session_position = "center"
+    transparency_mode = "glass"
+
+[theme]
+builtin = "Noctalia"
+community_palette = "Oxocarbon"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "foot", "gtk3", "gtk4", "helix", "kcolorscheme", "niri", "qt" ]
+    community_ids = [ "zen-browser", "gimp", "zed", "fuzzel", "fastfetch", "yazi" ]
+
+[widget.battery]
+capsule_radius = "auto"
+display_mode = "graphic"
+hide_when_full = true
+show_label = false
+
+[widget.brightness]
+show_label = false
+
+    [widget.brightness.actions]
+    scroll_down = "brightness-up"
+    scroll_up = "brightness-down"
+
+[widget.control-center]
+glyph = "cube"
+
+[widget.network]
+show_label = false
+
+[widget.volume]
+show_label = false
+
+    [widget.volume.actions]
+    scroll_down = "volume-up"
+    scroll_up = "volume-down"
+
+
+[widget.workspaces]
+active_pill_size = 1.6500000000000001
