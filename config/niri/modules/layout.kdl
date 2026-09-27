@@ -7,11 +7,6 @@ layer-rule {
     place-within-backdrop true
 }
 
-layer-rule {
-    match namespace="launcher"
-    baba-is-float true
-}
-
 layout {
     gaps 8
     center-focused-column "never"
