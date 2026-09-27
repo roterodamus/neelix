@@ -3,7 +3,7 @@ hotkey-overlay {
 }
 
 layer-rule {
-    match namespace="^wallpaper$"
+    match namespace="^noctalia-backdrop"
     place-within-backdrop true
 }
 
