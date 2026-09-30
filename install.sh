@@ -116,7 +116,7 @@ prompt_run() {
 }
 
 clear
-prompt_run "Install tuigreet?" ./post_install/install_greeter.sh
+prompt_run "Install tuigreet with autologin?" ./post_install/install_greeter.sh
 clear
 prompt_run "Install firewall?" ./post_install/install_firewall.sh
 clear
