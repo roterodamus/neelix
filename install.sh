@@ -77,7 +77,7 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 #mkdir -p ~/Public
 #mkdir -p ~/Templates
 #mkdir -p ~/Videos
-xdg-user-dirs-update --force 
+xdg-user-dirs-update 
 
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
