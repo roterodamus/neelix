@@ -46,7 +46,12 @@ order = [ "default", "workspace" ]
 [control_center.calendar]
 show_week_numbers = true
 
+[lockscreen]
+transition = [ "wipe" ]
+transition_duration = 400
+
 [shell]
+offline_mode = true
 password_style = "random"
 polkit_agent = true
 settings_window_translucent = true
@@ -74,6 +79,9 @@ directory = "~/Pictures/Wallpapers"
 
     [wallpaper.default]
     path = "~/Pictures/Wallpapers/unsplash2.jpg"
+
+[weather]
+enabled = false
 
 [widget.battery]
 capsule_radius = "auto"
