@@ -88,13 +88,13 @@ sudo chsh -s /usr/bin/fish $USER
 # =======================================================
 # Prompt user to run post install scripts
 # =======================================================
-chmod +x ~/neelix/post_install/realtime-setup.sh
-chmod +x ~/neelix/post_install/install_greeter.sh
-chmod +x ~/neelix/post_install/install_firewall.sh
-chmod +x ~/neelix/post_install/install_docker.sh
-chmod +x ~/neelix/post_install/install_devtools.sh
-chmod +x ~/neelix/post_install/install_flatpak.sh
-chmod +x ~/neelix/post_install/install_browser.sh
+#chmod +x ~/neelix/post_install/realtime-setup.sh
+#chmod +x ~/neelix/post_install/install_greeter.sh
+#chmod +x ~/neelix/post_install/install_firewall.sh
+#chmod +x ~/neelix/post_install/install_docker.sh
+#chmod +x ~/neelix/post_install/install_devtools.sh
+#chmod +x ~/neelix/post_install/install_flatpak.sh
+#chmod +x ~/neelix/post_install/install_browser.sh
 
 prompt_run() {
   local prompt="$1"
@@ -118,19 +118,19 @@ prompt_run() {
 }
 
 clear
-prompt_run "Install tuigreet with autologin?" ./post_install/install_greeter.sh
+prompt_run "Install tuigreet with autologin?" bash /post_install/install_greeter.sh
 clear
-prompt_run "Install firewall?" ./post_install/install_firewall.sh
+prompt_run "Install firewall?" bash /post_install/install_firewall.sh
 clear
-prompt_run "Install Flatpak?" ./post_install/install_flatpak.sh
+prompt_run "Install Flatpak?" bash /post_install/install_flatpak.sh
 clear
-prompt_run "Run realtime setup?" ./post_install/realtime-setup.sh
+prompt_run "Run realtime setup?" bash /post_install/realtime-setup.sh
 clear
-prompt_run "Install Rust dev tools?" ./post_install/install_devtools.sh
+prompt_run "Install Rust dev tools?" bash /post_install/install_devtools.sh
 clear
-prompt_run "Install Docker?" ./post_install/install_docker.sh
+prompt_run "Install Docker?" bash /post_install/install_docker.sh
 clear
-prompt_run "Install a browser?" ./post_install/install_browser.sh
+prompt_run "Install a browser?" bash /post_install/install_browser.sh
 clear
 echo "Moved Neelix install folder to trash"
 trash ~/neelix/
