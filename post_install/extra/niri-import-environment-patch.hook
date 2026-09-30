@@ -1,0 +1,15 @@
+# This patches /usr/bin/niri-session to suppress a systemd warning during niri startup (https://github.com/niri-wm/niri/issues/254).
+#
+# Based on https://github.com/ripry/dotfiles/commit/468287a5aa16f65c038632ef82dcf3c81439aa98 but simplified to a single file.
+
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = niri
+
+[Action]
+Description = Patch niri-session import-environment deprecation warning
+When = PostTransaction
+# The trailing `$` anchor means this is a no-op once already patched, so it's safe to rerun on every niri transaction.
+Exec = /usr/bin/env sed -i "s@    systemctl --user import-environment$@    # HACK: The following line has been automatically patched by a pacman hook\n    SYSTEMD_COLORS=true systemctl --user import-environment 2>\&1 | grep -v 'Calling import-environment without a list of variable names is deprecated.'@" /usr/bin/niri-session
