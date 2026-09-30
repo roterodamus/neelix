@@ -69,14 +69,15 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 
 ##need to fix this with xdg##
-mkdir -p ~/Desktop
-mkdir -p ~/Documents
-mkdir -p ~/Downloads
-mkdir -p ~/Music
-mkdir -p ~/Pictures
-mkdir -p ~/Public
-mkdir -p ~/Templates
-mkdir -p ~/Videos
+#mkdir -p ~/Desktop
+#mkdir -p ~/Documents
+#mkdir -p ~/Downloads
+#mkdir -p ~/Music
+#mkdir -p ~/Pictures
+#mkdir -p ~/Public
+#mkdir -p ~/Templates
+#mkdir -p ~/Videos
+xdg-user-dirs-update --force 
 
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
