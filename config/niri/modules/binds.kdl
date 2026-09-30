@@ -1,29 +1,32 @@
 binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
     Mod+Ctrl+Alt+Delete allow-when-locked=true hotkey-overlay-title="Shutdown Now" { spawn "shutdown" "0"; }
     Mod+Ctrl+Shift+S allow-when-locked=true hotkey-overlay-title="Sleep Now" { spawn "systemctl" "suspend"; }
-    Mod+Shift+Slash { show-hotkey-overlay; }
-    Mod+Return hotkey-overlay-title="Terminal" { spawn "foot"; }
-    Mod+Space hotkey-overlay-title="Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
-    Mod+o { toggle-overview; }
-    Mod+B hotkey-overlay-title="File Browser" { spawn "foot" "--title=Yazi" "yazi"; }
-    // Mod+Print hotkey-overlay-title="print clipboard with peripage" { spawn "Bin/peripage-python/periclip-wl.sh"; }
-    Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
-    Mod+Comma { spawn-sh "noctalia msg settings-toggle"; }
-    Mod+Shift+Comma hotkey-overlay-title="Open Niri config in Helix" { spawn-sh "foot -TNiri-Config helix .config/niri/"; }
-    Alt+Tab { spawn-sh "noctalia msg window-switcher"; }
+
+    Mod+Return hotkey-overlay-title="Terminal"     { spawn "foot"; }
+    Mod+o                                          { toggle-overview; }
+
+    Mod+B hotkey-overlay-title="File Browser"      { spawn "foot" "--title=Yazi" "yazi"; }
+
+    Mod+Space         hotkey-overlay-title="Launcher"          { spawn-sh "noctalia msg panel-toggle launcher"; }
+    Mod+S             hotkey-overlay-title="Control Center"    { spawn-sh "noctalia msg panel-toggle control-center"; }
+    Mod+Comma         hotkey-overlay-title="Launcher"          { spawn-sh "noctalia msg settings-toggle"; }
+    Mod+Shift+Comma   hotkey-overlay-title="Niri config"       { spawn-sh "foot -TNiri-Config helix .config/niri/"; }
+    Alt+Tab           hotkey-overlay-title="Launcher"          { spawn-sh "noctalia msg window-switcher"; }
     
-    XF86AudioRaiseVolume { spawn-sh "noctalia msg volume-up"; }
-    XF86AudioLowerVolume { spawn-sh "noctalia msg volume-down"; }
-    XF86AudioMute { spawn-sh "noctalia msg volume-mute"; }
-    XF86MonBrightnessUp { spawn-sh "noctalia msg brightness-up"; }
-    XF86MonBrightnessDown { spawn-sh "noctalia msg brightness-down"; }
+    XF86AudioRaiseVolume       hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume       hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute              hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    XF86MonBrightnessUp        hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg brightness-up"; }
+    XF86MonBrightnessDown      hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg brightness-down"; }
     Mod+XF86MonBrightnessUp    hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg brightness-set 100"; }
     Mod+XF86MonBrightnessDown  hotkey-overlay-title=null  allow-when-locked=true { spawn-sh "noctalia msg brightness-set 1"; }
     
-    Mod+Q { close-window; }
+    Mod+Q     { close-window; }
 
     Mod+Left  { focus-column-left; }
     Mod+Down  { focus-window-down; }
@@ -42,10 +45,10 @@ binds {
     Mod+Shift+J     { move-window-down; }
     Mod+Shift+K     { move-window-up; }
     Mod+Shift+L     { move-column-right; }
-    Mod+Home { focus-column-first; }
-    Mod+End  { focus-column-last; }
-    Mod+Shift+Home { move-column-to-first; }
-    Mod+Shift+End  { move-column-to-last; }
+    Mod+Home        { focus-column-first; }
+    Mod+End         { focus-column-last; }
+    Mod+Shift+Home  { move-column-to-first; }
+    Mod+Shift+End   { move-column-to-last; }
 
     Mod+Ctrl+Left  { focus-monitor-left; }
     Mod+Ctrl+Down  { focus-monitor-down; }
@@ -81,16 +84,16 @@ binds {
 
     Mod+Shift+WheelScrollDown      cooldown-ms=150 { focus-workspace-down; }
     Mod+Shift+WheelScrollUp        cooldown-ms=150 { focus-workspace-up; }
-    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }
-    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { move-column-to-workspace-up; }
+    Mod+Ctrl+WheelScrollDown       cooldown-ms=150 { move-column-to-workspace-down; }
+    Mod+Ctrl+WheelScrollUp         cooldown-ms=150 { move-column-to-workspace-up; }
 
     Mod+WheelScrollRight      { focus-column-right; }
     Mod+WheelScrollLeft       { focus-column-left; }
     Mod+Ctrl+WheelScrollRight { move-column-right; }
     Mod+Ctrl+WheelScrollLeft  { move-column-left; }
 
-    Mod+WheelScrollDown      { focus-column-right; }
-    Mod+WheelScrollUp        { focus-column-left; }
+    Mod+WheelScrollDown            { focus-column-right; }
+    Mod+WheelScrollUp              { focus-column-left; }
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
