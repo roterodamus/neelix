@@ -51,30 +51,6 @@ if ! grep -q "ILoveCandy" /etc/pacman.conf; then
   sudo sed -i '/^\[options\]/a Color\nILoveCandy' /etc/pacman.conf
 fi
 
-
-# =======================================================
-# Install greeter (future plans: configure autologin)
-# =======================================================
-
-sudo pacman --needed --noconfirm -S greetd greetd-tuigreet niri
-
-sudo mkdir -p /etc/greetd
-cat <<EOF | sudo tee /etc/greetd/config.toml > /dev/null
-[terminal]
-vt = 1
-
-[initial_session]
-command = "niri-session"
-user = "$(whoami)"
-
-[default_session]
-command = "tuigreet --user-menu --cmd 'niri-session'"
-user = "$(whoami)"
-EOF
-
-sudo systemctl enable greetd.service
-sudo systemctl set-default graphical.target
-
 # =======================================================
 # Install content of packages.txt
 # =======================================================
@@ -111,6 +87,7 @@ sudo chsh -s /usr/bin/fish $USER
 # =======================================================
 
 chmod +x ~/neelix/post_install/realtime-setup.sh
+chmod +x ~/neelix/post_install/install_greeter.sh
 chmod +x ~/neelix/post_install/install_firewall.sh
 chmod +x ~/neelix/post_install/install_docker.sh
 chmod +x ~/neelix/post_install/install_devtools.sh
@@ -138,6 +115,8 @@ prompt_run() {
   done
 }
 
+clear
+prompt_run "Install tuigreet?" ./post_install/install_greeter.sh
 clear
 prompt_run "Install firewall?" ./post_install/install_firewall.sh
 clear
