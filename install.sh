@@ -83,7 +83,7 @@ sudo chsh -s /usr/bin/fish $USER
 # Prompt user to run post install scripts
 # =======================================================
 chmod +x ~/neelix/post_install/realtime-setup.sh
-chmod +x ~/neelix/post_install/install_greeter.sh
+chmod +x ~/neelix/post_install/install_greeter1.sh
 chmod +x ~/neelix/post_install/install_firewall.sh
 chmod +x ~/neelix/post_install/install_docker.sh
 chmod +x ~/neelix/post_install/install_devtools.sh
@@ -112,7 +112,7 @@ prompt_run() {
 }
 
 clear
-prompt_run "Install tuigreet with autologin?" ./post_install/install_greeter.sh
+prompt_run "Install tuigreet with autologin?" ./post_install/install_greeter1.sh
 clear
 prompt_run "Install firewall?" ./post_install/install_firewall.sh
 clear
