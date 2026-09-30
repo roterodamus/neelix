@@ -1,17 +1,17 @@
 binds {
-    Mod+Shift+Slash { show-hotkey-overlay; }
-
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+E { quit; }
-    Mod+Shift+P { power-off-monitors; }
-    Mod+Ctrl+Alt+Delete allow-when-locked=true hotkey-overlay-title="Shutdown Now" { spawn "shutdown" "0"; }
-    Mod+Ctrl+Shift+S allow-when-locked=true hotkey-overlay-title="Sleep Now" { spawn "systemctl" "suspend"; }
+    Mod+Shift+Slash                                { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Terminal"     { spawn "foot"; }
-    Mod+o                                          { toggle-overview; }
-
     Mod+B hotkey-overlay-title="File Browser"      { spawn "foot" "--title=Yazi" "yazi"; }
 
+    Mod+Escape allow-inhibiting=false              { toggle-keyboard-shortcuts-inhibit; }
+
+    Mod+Shift+E                                                                            { quit; }
+    Mod+Shift+P                                                                            { power-off-monitors; }
+    Mod+Ctrl+Alt+Delete     allow-when-locked=true hotkey-overlay-title="Shutdown Now"     { spawn "shutdown" "0"; }
+    Mod+Ctrl+Shift+S        allow-when-locked=true hotkey-overlay-title="Sleep Now"        { spawn "systemctl" "suspend"; }
+
+    Mod+o                                                      { toggle-overview; }
     Mod+Space         hotkey-overlay-title="Launcher"          { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S             hotkey-overlay-title="Control Center"    { spawn-sh "noctalia msg panel-toggle control-center"; }
     Mod+Comma         hotkey-overlay-title="Launcher"          { spawn-sh "noctalia msg settings-toggle"; }
@@ -97,47 +97,47 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
-    Mod+6 { focus-workspace 6; }
-    Mod+7 { focus-workspace 7; }
-    Mod+8 { focus-workspace 8; }
-    Mod+9 { focus-workspace 9; }
-    Mod+Shift+1 { move-window-to-workspace 1; }
-    Mod+Shift+2 { move-window-to-workspace 2; }
-    Mod+Shift+3 { move-window-to-workspace 3; }
-    Mod+Shift+4 { move-window-to-workspace 4; }
-    Mod+Shift+5 { move-window-to-workspace 5; }
-    Mod+Shift+6 { move-window-to-workspace 6; }
-    Mod+Shift+7 { move-window-to-workspace 7; }
-    Mod+Shift+8 { move-window-to-workspace 8; }
-    Mod+Shift+9 { move-window-to-workspace 9; }
+    Mod+1           { focus-workspace 1; }
+    Mod+2           { focus-workspace 2; }
+    Mod+3           { focus-workspace 3; }
+    Mod+4           { focus-workspace 4; }
+    Mod+5           { focus-workspace 5; }
+    Mod+6           { focus-workspace 6; }
+    Mod+7           { focus-workspace 7; }
+    Mod+8           { focus-workspace 8; }
+    Mod+9           { focus-workspace 9; }
+    Mod+Shift+1     { move-window-to-workspace 1; }
+    Mod+Shift+2     { move-window-to-workspace 2; }
+    Mod+Shift+3     { move-window-to-workspace 3; }
+    Mod+Shift+4     { move-window-to-workspace 4; }
+    Mod+Shift+5     { move-window-to-workspace 5; }
+    Mod+Shift+6     { move-window-to-workspace 6; }
+    Mod+Shift+7     { move-window-to-workspace 7; }
+    Mod+Shift+8     { move-window-to-workspace 8; }
+    Mod+Shift+9     { move-window-to-workspace 9; }
 
-    Mod+BracketLeft  { consume-or-expel-window-left; }
-    Mod+BracketRight { consume-or-expel-window-right; }
-    Mod+Shift+BracketLeft  { consume-window-into-column; }
-    Mod+Shift+BracketRight { expel-window-from-column; }
+    Mod+BracketLeft          { consume-or-expel-window-left; }
+    Mod+BracketRight         { consume-or-expel-window-right; }
+    Mod+Shift+BracketLeft    { consume-window-into-column; }
+    Mod+Shift+BracketRight   { expel-window-from-column; }
 
-    Mod+R { switch-preset-column-width; }
-    Mod+Shift+R { switch-preset-window-height; }
-    Mod+Ctrl+R { reset-window-height; }
-    Mod+F { maximize-column; }
-    Mod+Shift+F { fullscreen-window; }
-    Mod+Ctrl+F { expand-column-to-available-width; }
-    Mod+C { center-column; }
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
-    Mod+Shift+Minus { set-window-height "-10%"; }
-    Mod+Shift+Equal { set-window-height "+10%"; }
+    Mod+R             { switch-preset-column-width; }
+    Mod+Shift+R       { switch-preset-window-height; }
+    Mod+Ctrl+R        { reset-window-height; }
+    Mod+F             { maximize-column; }
+    Mod+Shift+F       { fullscreen-window; }
+    Mod+Ctrl+F        { expand-column-to-available-width; }
+    Mod+C             { center-column; }
+    Mod+Minus         { set-column-width "-10%"; }
+    Mod+Equal         { set-column-width "+10%"; }
+    Mod+Shift+Minus   { set-window-height "-10%"; }
+    Mod+Shift+Equal   { set-window-height "+10%"; }
 
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+V             { toggle-window-floating; }
+    Mod+Shift+V       { switch-focus-between-floating-and-tiling; }
+    Mod+W             { toggle-column-tabbed-display; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Print             { screenshot; }
+    Ctrl+Print        { screenshot-screen; }
+    Alt+Print         { screenshot-window; }
 }
