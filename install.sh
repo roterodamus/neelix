@@ -3,7 +3,6 @@
 # =======================================================
 # Copy dot files
 # =======================================================
-
 mkdir -p ~/.config
 cp -R config/* ~/.config/
 
@@ -12,7 +11,6 @@ cp -R hidden-apps/* ~/.local/share/applications/
 # =======================================================
 # Install chaotic aur & yay
 # =======================================================
-
 # Only add Chaotic-AUR if the architecture is x86_64 so ARM users can build the packages
 if [[ "$(uname -m)" == "x86_64" ]]; then
   # Try installing Chaotic-AUR keyring and mirrorlist
@@ -54,12 +52,10 @@ fi
 # =======================================================
 # Niri warnig fix + Install content of packages.txt
 # =======================================================
-
 sudo mkdir -p /etc/pacman.d/hooks/
 sudo cp post_install/extra/niri-import-environment-patch.hook /etc/pacman.d/hooks/
 
 yay -Syu --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
-
 # =======================================================
 # Enable misc. services & stuff
 # =======================================================
@@ -68,15 +64,6 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<C
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 
-##need to fix this with xdg##
-#mkdir -p ~/Desktop
-#mkdir -p ~/Documents
-#mkdir -p ~/Downloads
-#mkdir -p ~/Music
-#mkdir -p ~/Pictures
-#mkdir -p ~/Public
-#mkdir -p ~/Templates
-#mkdir -p ~/Videos
 xdg-user-dirs-update 
 
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
@@ -85,7 +72,6 @@ sudo usermod -aG video $USER
 sudo usermod -aG uucp $USER
 
 sudo chsh -s /usr/bin/fish $USER
-
 # =======================================================
 # Prompt user to run post install scripts
 # =======================================================
