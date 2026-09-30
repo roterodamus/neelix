@@ -55,6 +55,7 @@ fi
 # Niri warnig fix + Install content of packages.txt
 # =======================================================
 
+sudo mkdir -p /etc/pacman.d/hooks/
 sudo cp post_install/extra/niri-import-environment-patch.hook /etc/pacman.d/hooks/
 
 yay -Syu --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
