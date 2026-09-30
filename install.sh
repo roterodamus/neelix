@@ -52,20 +52,22 @@ if ! grep -q "ILoveCandy" /etc/pacman.conf; then
 fi
 
 # =======================================================
-# Install content of packages.txt
+# Niri warnig fix + Install content of packages.txt
 # =======================================================
+
+sudo cp post_install/extra/niri-import-environment-patch.hook /etc/pacman.d/hooks/
 
 yay -Syu --needed --noconfirm - < <(grep -v '^#' packages.txt | grep -v '^$')
 
 # =======================================================
 # Enable misc. services & stuff
 # =======================================================
-
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal foot
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 
+##need to fix this with xdg##
 mkdir -p ~/Desktop
 mkdir -p ~/Documents
 mkdir -p ~/Downloads
@@ -85,7 +87,6 @@ sudo chsh -s /usr/bin/fish $USER
 # =======================================================
 # Prompt user to run post install scripts
 # =======================================================
-
 chmod +x ~/neelix/post_install/realtime-setup.sh
 chmod +x ~/neelix/post_install/install_greeter.sh
 chmod +x ~/neelix/post_install/install_firewall.sh
