@@ -65,6 +65,13 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal flatpak system
 
 xdg-user-dirs-update 
+mkdir -p ~/.config/gtk-3.0
+for dir in Desktop Documents Downloads Music Pictures Videos Public Templates; do
+    path="$HOME/$dir"
+    [ -d "$path" ] &&
+        grep -qxF "file://$path" ~/.config/gtk-3.0/bookmarks 2>/dev/null ||
+        [ ! -d "$path" ] || printf 'file://%s\n' "$path" >> ~/.config/gtk-3.0/bookmarks
+done
 
 ln -sr ~/.config/Wallpapers ~/Pictures/Wallpapers
 
