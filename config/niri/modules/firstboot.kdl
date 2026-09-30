@@ -1,3 +1,0 @@
-spawn-sh-at-startup "foot --title=Niri-Config helix .config/niri/"
-
-spawn-sh-at-startup "sed -i '/firstboot/d' ~/.config/niri/config.kdl"
