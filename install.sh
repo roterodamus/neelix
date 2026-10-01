@@ -82,6 +82,7 @@ sudo chsh -s /usr/bin/fish $USER
 # =======================================================
 # Prompt user to run post install scripts
 # =======================================================
+chmod +x ~/neelix/post_install/install_plymouth.sh
 chmod +x ~/neelix/post_install/realtime-setup.sh
 chmod +x ~/neelix/post_install/install_greeter1.sh
 chmod +x ~/neelix/post_install/install_firewall.sh
@@ -111,6 +112,8 @@ prompt_run() {
   done
 }
 
+clear
+prompt_run "Install plymouth and silentboot? (Experimental)" ./post_install/install_plymouth.sh
 clear
 prompt_run "Install tuigreet with autologin?" ./post_install/install_greeter1.sh
 clear
