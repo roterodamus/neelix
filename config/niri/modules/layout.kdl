@@ -6,7 +6,14 @@ layer-rule {
     match namespace="^noctalia-backdrop"
     place-within-backdrop true
 }
-
+layer-rule {
+  match namespace="^noctalia-(bar-workspace)$"
+  // match namespace="^noctalia-(bar-[^\"]+|notification|dock|panel|attached-panel|osd)$"
+  background-effect {
+    xray false
+    blur false
+  }
+}
 layout {
     gaps 8
     center-focused-column "never"
