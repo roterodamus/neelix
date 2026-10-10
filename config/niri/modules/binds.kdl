@@ -8,6 +8,7 @@ binds {
 
     Mod+Shift+E                                                                            { quit; }
     Mod+Shift+P                                                                            { power-off-monitors; }
+    Ctrl+Alt+Delete         allow-when-locked=true hotkey-overlay-title="Session Panel"    { spawn-sh "noctalia msg panel-toggle session"; }
     Mod+Ctrl+Alt+Delete     allow-when-locked=true hotkey-overlay-title="Shutdown Now"     { spawn "shutdown" "0"; }
     Mod+Ctrl+Shift+S        allow-when-locked=true hotkey-overlay-title="Sleep Now"        { spawn "systemctl" "suspend"; }
 
